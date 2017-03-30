@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		89DF58761E8CEF73003ACE0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DF58751E8CEF73003ACE0B /* main.m */; };
+		89DF58791E8CEF73003ACE0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DF58781E8CEF73003ACE0B /* AppDelegate.m */; };
+		89DF587C1E8CEF73003ACE0B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DF587B1E8CEF73003ACE0B /* ViewController.m */; };
+		89DF587F1E8CEF73003ACE0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89DF587D1E8CEF73003ACE0B /* Main.storyboard */; };
+		89DF58811E8CEF73003ACE0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89DF58801E8CEF73003ACE0B /* Assets.xcassets */; };
+		89DF58841E8CEF73003ACE0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89DF58821E8CEF73003ACE0B /* LaunchScreen.storyboard */; };
+		89DF589C1E8CEF85003ACE0B /* ALCalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DF588D1E8CEF85003ACE0B /* ALCalendarCollectionView.m */; };
+		89DF589D1E8CEF85003ACE0B /* ALCalendarCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DF588F1E8CEF85003ACE0B /* ALCalendarCollectionViewCell.m */; };
+		89DF589E1E8CEF85003ACE0B /* ALCalendarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DF58911E8CEF85003ACE0B /* ALCalendarModel.m */; };
+		89DF589F1E8CEF85003ACE0B /* ALCalendarNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DF58931E8CEF85003ACE0B /* ALCalendarNavView.m */; };
+		89DF58A01E8CEF85003ACE0B /* ALCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DF58951E8CEF85003ACE0B /* ALCalendarView.m */; };
+		89DF58A11E8CEF85003ACE0B /* ALDayUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DF58971E8CEF85003ACE0B /* ALDayUtils.m */; };
+		89DF58A21E8CEF85003ACE0B /* icon_Next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89DF58981E8CEF85003ACE0B /* icon_Next@2x.png */; };
+		89DF58A31E8CEF85003ACE0B /* icon_Next@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89DF58991E8CEF85003ACE0B /* icon_Next@3x.png */; };
+		89DF58A41E8CEF85003ACE0B /* icon_Prev@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89DF589A1E8CEF85003ACE0B /* icon_Prev@2x.png */; };
+		89DF58A51E8CEF85003ACE0B /* icon_Prev@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89DF589B1E8CEF85003ACE0B /* icon_Prev@3x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		89DF58711E8CEF73003ACE0B /* ALCalendarView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALCalendarView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89DF58751E8CEF73003ACE0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		89DF58771E8CEF73003ACE0B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		89DF58781E8CEF73003ACE0B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		89DF587A1E8CEF73003ACE0B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		89DF587B1E8CEF73003ACE0B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		89DF587E1E8CEF73003ACE0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		89DF58801E8CEF73003ACE0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		89DF58831E8CEF73003ACE0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89DF58851E8CEF73003ACE0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89DF588C1E8CEF85003ACE0B /* ALCalendarCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCalendarCollectionView.h; sourceTree = "<group>"; };
+		89DF588D1E8CEF85003ACE0B /* ALCalendarCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCalendarCollectionView.m; sourceTree = "<group>"; };
+		89DF588E1E8CEF85003ACE0B /* ALCalendarCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCalendarCollectionViewCell.h; sourceTree = "<group>"; };
+		89DF588F1E8CEF85003ACE0B /* ALCalendarCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCalendarCollectionViewCell.m; sourceTree = "<group>"; };
+		89DF58901E8CEF85003ACE0B /* ALCalendarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCalendarModel.h; sourceTree = "<group>"; };
+		89DF58911E8CEF85003ACE0B /* ALCalendarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCalendarModel.m; sourceTree = "<group>"; };
+		89DF58921E8CEF85003ACE0B /* ALCalendarNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCalendarNavView.h; sourceTree = "<group>"; };
+		89DF58931E8CEF85003ACE0B /* ALCalendarNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCalendarNavView.m; sourceTree = "<group>"; };
+		89DF58941E8CEF85003ACE0B /* ALCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCalendarView.h; sourceTree = "<group>"; };
+		89DF58951E8CEF85003ACE0B /* ALCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCalendarView.m; sourceTree = "<group>"; };
+		89DF58961E8CEF85003ACE0B /* ALDayUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDayUtils.h; sourceTree = "<group>"; };
+		89DF58971E8CEF85003ACE0B /* ALDayUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDayUtils.m; sourceTree = "<group>"; };
+		89DF58981E8CEF85003ACE0B /* icon_Next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_Next@2x.png"; sourceTree = "<group>"; };
+		89DF58991E8CEF85003ACE0B /* icon_Next@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_Next@3x.png"; sourceTree = "<group>"; };
+		89DF589A1E8CEF85003ACE0B /* icon_Prev@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_Prev@2x.png"; sourceTree = "<group>"; };
+		89DF589B1E8CEF85003ACE0B /* icon_Prev@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_Prev@3x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89DF586E1E8CEF73003ACE0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		89DF58681E8CEF72003ACE0B = {
+			isa = PBXGroup;
+			children = (
+				89DF58731E8CEF73003ACE0B /* ALCalendarView */,
+				89DF58721E8CEF73003ACE0B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		89DF58721E8CEF73003ACE0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89DF58711E8CEF73003ACE0B /* ALCalendarView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89DF58731E8CEF73003ACE0B /* ALCalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				89DF588B1E8CEF85003ACE0B /* 日历 */,
+				89DF58771E8CEF73003ACE0B /* AppDelegate.h */,
+				89DF58781E8CEF73003ACE0B /* AppDelegate.m */,
+				89DF587A1E8CEF73003ACE0B /* ViewController.h */,
+				89DF587B1E8CEF73003ACE0B /* ViewController.m */,
+				89DF587D1E8CEF73003ACE0B /* Main.storyboard */,
+				89DF58801E8CEF73003ACE0B /* Assets.xcassets */,
+				89DF58821E8CEF73003ACE0B /* LaunchScreen.storyboard */,
+				89DF58851E8CEF73003ACE0B /* Info.plist */,
+				89DF58741E8CEF73003ACE0B /* Supporting Files */,
+			);
+			path = ALCalendarView;
+			sourceTree = "<group>";
+		};
+		89DF58741E8CEF73003ACE0B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				89DF58751E8CEF73003ACE0B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		89DF588B1E8CEF85003ACE0B /* 日历 */ = {
+			isa = PBXGroup;
+			children = (
+				89DF58941E8CEF85003ACE0B /* ALCalendarView.h */,
+				89DF58951E8CEF85003ACE0B /* ALCalendarView.m */,
+				89DF588C1E8CEF85003ACE0B /* ALCalendarCollectionView.h */,
+				89DF588D1E8CEF85003ACE0B /* ALCalendarCollectionView.m */,
+				89DF588E1E8CEF85003ACE0B /* ALCalendarCollectionViewCell.h */,
+				89DF588F1E8CEF85003ACE0B /* ALCalendarCollectionViewCell.m */,
+				89DF58901E8CEF85003ACE0B /* ALCalendarModel.h */,
+				89DF58911E8CEF85003ACE0B /* ALCalendarModel.m */,
+				89DF58921E8CEF85003ACE0B /* ALCalendarNavView.h */,
+				89DF58931E8CEF85003ACE0B /* ALCalendarNavView.m */,
+				89DF58961E8CEF85003ACE0B /* ALDayUtils.h */,
+				89DF58971E8CEF85003ACE0B /* ALDayUtils.m */,
+				89DF58981E8CEF85003ACE0B /* icon_Next@2x.png */,
+				89DF58991E8CEF85003ACE0B /* icon_Next@3x.png */,
+				89DF589A1E8CEF85003ACE0B /* icon_Prev@2x.png */,
+				89DF589B1E8CEF85003ACE0B /* icon_Prev@3x.png */,
+			);
+			path = "日历";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		89DF58701E8CEF73003ACE0B /* ALCalendarView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89DF58881E8CEF73003ACE0B /* Build configuration list for PBXNativeTarget "ALCalendarView" */;
+			buildPhases = (
+				89DF586D1E8CEF73003ACE0B /* Sources */,
+				89DF586E1E8CEF73003ACE0B /* Frameworks */,
+				89DF586F1E8CEF73003ACE0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ALCalendarView;
+			productName = ALCalendarView;
+			productReference = 89DF58711E8CEF73003ACE0B /* ALCalendarView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		89DF58691E8CEF72003ACE0B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = hwt;
+				TargetAttributes = {
+					89DF58701E8CEF73003ACE0B = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 89DF586C1E8CEF72003ACE0B /* Build configuration list for PBXProject "ALCalendarView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 89DF58681E8CEF72003ACE0B;
+			productRefGroup = 89DF58721E8CEF73003ACE0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				89DF58701E8CEF73003ACE0B /* ALCalendarView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89DF586F1E8CEF73003ACE0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89DF58A21E8CEF85003ACE0B /* icon_Next@2x.png in Resources */,
+				89DF58A31E8CEF85003ACE0B /* icon_Next@3x.png in Resources */,
+				89DF58841E8CEF73003ACE0B /* LaunchScreen.storyboard in Resources */,
+				89DF58A51E8CEF85003ACE0B /* icon_Prev@3x.png in Resources */,
+				89DF58811E8CEF73003ACE0B /* Assets.xcassets in Resources */,
+				89DF58A41E8CEF85003ACE0B /* icon_Prev@2x.png in Resources */,
+				89DF587F1E8CEF73003ACE0B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		89DF586D1E8CEF73003ACE0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89DF589E1E8CEF85003ACE0B /* ALCalendarModel.m in Sources */,
+				89DF589F1E8CEF85003ACE0B /* ALCalendarNavView.m in Sources */,
+				89DF589D1E8CEF85003ACE0B /* ALCalendarCollectionViewCell.m in Sources */,
+				89DF587C1E8CEF73003ACE0B /* ViewController.m in Sources */,
+				89DF58791E8CEF73003ACE0B /* AppDelegate.m in Sources */,
+				89DF58A01E8CEF85003ACE0B /* ALCalendarView.m in Sources */,
+				89DF58A11E8CEF85003ACE0B /* ALDayUtils.m in Sources */,
+				89DF58761E8CEF73003ACE0B /* main.m in Sources */,
+				89DF589C1E8CEF85003ACE0B /* ALCalendarCollectionView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		89DF587D1E8CEF73003ACE0B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89DF587E1E8CEF73003ACE0B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		89DF58821E8CEF73003ACE0B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89DF58831E8CEF73003ACE0B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		89DF58861E8CEF73003ACE0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		89DF58871E8CEF73003ACE0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		89DF58891E8CEF73003ACE0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ALCalendarView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.ALCalendarView";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		89DF588A1E8CEF73003ACE0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ALCalendarView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.ALCalendarView";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		89DF586C1E8CEF72003ACE0B /* Build configuration list for PBXProject "ALCalendarView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89DF58861E8CEF73003ACE0B /* Debug */,
+				89DF58871E8CEF73003ACE0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89DF58881E8CEF73003ACE0B /* Build configuration list for PBXNativeTarget "ALCalendarView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89DF58891E8CEF73003ACE0B /* Debug */,
+				89DF588A1E8CEF73003ACE0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 89DF58691E8CEF72003ACE0B /* Project object */;
+}
