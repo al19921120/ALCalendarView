@@ -22,6 +22,12 @@
 
 + (NSUInteger)firstWeekdayInMonth:(NSUInteger)month ofYear:(NSUInteger)year;
 
+//年月日
 + (NSDateComponents *)dateComponentsFromDate:(NSDate *)date;
+//年月日时分秒
++ (NSDateComponents *)detailDateComponentsFromDate:(NSDate *)date;
+
+//是否同一天
++ (BOOL)isDate:(NSDate *)date equalToAnotherDate:(NSDate *)anotherDate;
 
 @end

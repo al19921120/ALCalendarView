@@ -13,8 +13,7 @@
 - (instancetype)init {
     
     if (self = [super init]) {
-        _isBeginSelect = NO;
-        _isEndSelect = NO;
+        _isSelect = NO;
     }
     return self;
     

@@ -11,8 +11,10 @@
 @interface ALCalendarModel : NSObject
 
 @property (nonatomic, assign) BOOL isCurMonth;
-@property (nonatomic, assign) BOOL isBeginSelect;
-@property (nonatomic, assign) BOOL isEndSelect;
+//@property (nonatomic, assign) BOOL isToday;
+//@property (nonatomic, assign) BOOL isBeginSelect;
+//@property (nonatomic, assign) BOOL isEndSelect;
+@property (nonatomic, assign) BOOL isSelect;
 
 @property (nonatomic, assign) NSUInteger day;
 @property (nonatomic, strong) NSDate *date;

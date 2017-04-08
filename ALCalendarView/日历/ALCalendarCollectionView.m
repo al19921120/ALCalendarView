@@ -48,25 +48,51 @@ static NSString *CalendarCellID = @"CalendarCell";
 - (void)updateDataWithSelectedDate {
     
     for (ALCalendarModel *tempModel in _data) {
+        
+        if (!_beginDate && !_endDate) {
+            tempModel.isSelect = NO;
+            continue;
+        }
+        
+        if (_beginDate && !_endDate) {
+            
+            if ([tempModel.date compare:_beginDate] == NSOrderedSame) {
+                tempModel.isSelect = YES;
+            }
+            else {
+                tempModel.isSelect = NO;
+            }
+            continue;
 
-        if ([tempModel.date compare:_beginDate] == NSOrderedSame && _beginDate != nil) {
-            tempModel.isBeginSelect = YES;
+        }
+
+        if (!_beginDate && _endDate) {
+            
+            if ([tempModel.date compare:_endDate] == NSOrderedSame) {
+                tempModel.isSelect = YES;
+            }
+            else {
+                tempModel.isSelect = NO;
+            }
+            continue;
         }
         
-        if ((([tempModel.date compare:_beginDate] == NSOrderedDescending))
-            && ([tempModel.date compare:_endDate] == NSOrderedAscending ||
-            ([tempModel.date compare:_endDate] == NSOrderedSame && _endDate != nil)
-                )) {
-            tempModel.isEndSelect = YES;
-        }
-        else {
-            tempModel.isEndSelect = NO;
+        
+        if (_beginDate && _endDate) {
+            
+            if (([tempModel.date compare:_beginDate] == NSOrderedDescending
+                && [tempModel.date compare:_endDate] == NSOrderedAscending)
+                || [tempModel.date compare:_beginDate] == NSOrderedSame
+                ||  [tempModel.date compare:_endDate] == NSOrderedSame) {
+                tempModel.isSelect = YES;
+            }
+            else {
+                tempModel.isSelect = NO;
+            }
+            
         }
         
-        //单一end情况
-        if (_beginDate == nil && _endDate != nil && ([tempModel.date compare:_endDate] == NSOrderedSame && _endDate != nil)) {
-            tempModel.isEndSelect = YES;
-        }
+        
         
     }
     [self reloadData];
@@ -89,21 +115,25 @@ static NSString *CalendarCellID = @"CalendarCell";
     
     //周末
     NSUInteger remain = indexPath.row % 7;
-    if ((remain == 0 || remain == 6) && (!model.isBeginSelect && !model.isEndSelect)) {
+
+    BOOL isToday = [ALDayUtils isDate:model.date equalToAnotherDate:[NSDate date]];
+    if (isToday) {
+        cell.labText.layer.backgroundColor = __kAlRedColor.CGColor;
+        cell.labText.textColor = [UIColor whiteColor];
+    }
+    
+    if ((remain == 0 || remain == 6) && !model.isSelect && !isToday) {
         cell.labText.textColor = __kAlRedColor;
         cell.labText.layer.backgroundColor = [UIColor whiteColor].CGColor;
     }
     else {
-        
-        if (model.isBeginSelect) {
-            cell.labText.layer.backgroundColor = __kAlRedColor.CGColor;
-            cell.labText.textColor = [UIColor whiteColor];
-        }
-        if (model.isEndSelect) {
+
+        if (model.isSelect) {
             cell.labText.layer.backgroundColor = __kAlBlackColor.CGColor;
             cell.labText.textColor = [UIColor whiteColor];
         }
-        if (!model.isBeginSelect && !model.isEndSelect) {
+
+        if (!model.isSelect && !isToday) {
             cell.labText.layer.backgroundColor = [UIColor whiteColor].CGColor;
             cell.labText.textColor = [UIColor blackColor];
         }
@@ -126,88 +156,94 @@ static NSString *CalendarCellID = @"CalendarCell";
     if (!model.isCurMonth) {
         return;
     }
-    
-    if (_isEndDaySelected && !_isBeginDaySelected
-        && ([model.date compare:_endDate] == NSOrderedDescending)) {
-        return;
-    }
-    
 
-    if ([model.date compare:_beginDate] == NSOrderedAscending
-        || ((([model.date compare:_beginDate] ==  NSOrderedSame )//&& _beginDate != nil )
-        || !_isBeginDaySelected) && !model.isEndSelect)
-        ) {
-
-        if (model.isBeginSelect) {
-            
-            model.isBeginSelect = NO;
-            self.beginDate = nil;
-            
-            for (ALCalendarModel *tempModel in _data) {
-
-                if (([tempModel.date compare:_endDate] != NSOrderedSame)
-                    && tempModel.isEndSelect) {
-                    tempModel.isEndSelect = NO;
-                }
-
-            }
-
-        }
-        else {
-            model.isBeginSelect = YES;
-            for (ALCalendarModel *tempModel in _data) {
-
-                if (([tempModel.date compare:_beginDate] == NSOrderedSame && _beginDate != nil)) {
-                    tempModel.isBeginSelect = NO;
-                }
-                if (([tempModel.date compare:model.date] == NSOrderedDescending)
-                    && ([tempModel.date compare:_endDate] == NSOrderedAscending)) {
-                    tempModel.isEndSelect = YES;
-                }
-                
-            }
-
-            self.beginDate = model.date;
-        }
-        
+    if (!_beginDate && !_endDate) {
+        _beginDate = model.date;
+        model.isSelect = YES;
         [self reloadData];
         return;
+    }
+
+    if (_beginDate) {
+        
+        switch ([model.date compare:_beginDate]) {
+                
+            case NSOrderedDescending:
+                
+                if (_endDate) {
+                    
+                    switch ([model.date compare:_endDate]) {
+                            
+                        case NSOrderedDescending:
+                            _endDate = model.date;
+                            break;
+                            
+                        case NSOrderedSame:
+                            _endDate = nil;
+                            break;
+                            
+                        case NSOrderedAscending:
+                            _endDate = model.date;
+                            break;
+                            
+                        default:
+                            break;
+                    }
+                }
+                else {
+                    _endDate = model.date;
+                }
+                break;
+                
+            case NSOrderedSame:
+                _beginDate = nil;
+                break;
+                
+            case NSOrderedAscending:
+                
+                if (_endDate) {
+                    _beginDate = model.date;
+                }
+                else {
+                    _endDate = _beginDate;
+                    _beginDate = model.date;
+                }
+                
+                break;
+                
+            default:
+                break;
+        }
+        
+        [self updateDataWithSelectedDate];
+        return;
+    }
+    
+    if (_endDate) {
+        
+        switch ([model.date compare:_endDate]) {
+                
+            case NSOrderedDescending:
+                _beginDate = _endDate;
+                _endDate = model.date;
+                break;
+                
+            case NSOrderedSame:
+                _endDate = nil;
+                break;
+                
+            case NSOrderedAscending:
+                _beginDate = model.date;
+                break;
+                
+            default:
+                break;
+        }
+        
         
     }
     
-    
-    if ([model.date compare:_endDate] == NSOrderedSame && _endDate != nil) {
-        
-        //将选中区间向前移动
-        NSDateComponents *cancelEndComponents = [ALDayUtils dateComponentsFromDate:_endDate];
-        cancelEndComponents.day = cancelEndComponents.day - 1;
-        NSDate *preDate = [ALDayUtils dateFromDateComponents:cancelEndComponents];
-        
-        if ([_beginDate compare:preDate] == NSOrderedAscending) {
-            self.endDate = preDate;
-        }
-        else {
-            self.endDate = nil;
-        }
-        
-        model.isEndSelect = NO;
-    }
-    else {
-        self.endDate = model.date;
-        for (ALCalendarModel *tempModel in _data) {
-            
-            if (([tempModel.date compare:_beginDate] == NSOrderedDescending)
-                && ([tempModel.date compare:_endDate] == NSOrderedAscending || [tempModel.date compare:_endDate] == NSOrderedSame)) {
-                tempModel.isEndSelect = YES;
-            }
-            else {
-                tempModel.isEndSelect = NO;
-            }
-        }
-    }
-
-
-    [self reloadData];
+    [self updateDataWithSelectedDate];
     
 }
 

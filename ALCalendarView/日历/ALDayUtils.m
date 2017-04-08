@@ -71,4 +71,20 @@
     return [[self localCalendar] components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:date];
 }
 
++ (NSDateComponents *)detailDateComponentsFromDate:(NSDate *)date {
+    
+    if (__kUpIOS8) {
+        return [[self localCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday) fromDate:date];
+    }
+    return [[self localCalendar] components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit | NSWeekdayCalendarUnit) fromDate:date];
+}
+
++ (BOOL)isDate:(NSDate *)date equalToAnotherDate:(NSDate *)anotherDate {
+    
+    NSDateComponents *dateComponents = [self dateComponentsFromDate:date];
+    NSDateComponents *anotherDateComponents = [self dateComponentsFromDate:anotherDate];
+    return dateComponents.year == anotherDateComponents.year && dateComponents.month == anotherDateComponents.month && dateComponents.day == anotherDateComponents.day;
+}
+
+
 @end
